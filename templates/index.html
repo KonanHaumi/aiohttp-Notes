@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Notebook</title>
+</head>
+<body>
+    <h1>Notebook</h1>
+    <form action="/notes" method="post">
+        <label for="note">Введите текст записки:</label><br>
+        <textarea id="note" name="note" rows="4" cols="50"></textarea><br>
+        <input type="submit" value="Add Note">
+    </form>
+    <h2>Записки:</h2>
+    <ul>
+        {% for note in notes %}
+            <li>{{ note }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
